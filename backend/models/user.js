@@ -1,9 +1,6 @@
-const { Sequelize, DataTypes } = require("sequelize");
+const { DataTypes } = require("sequelize");
 
-const sequelize = new Sequelize("condb", "root", "", {
-  host: "localhost",
-  dialect: "mysql",
-});
+const sequelize = require("./../db/mysql-database.js");
 
 const User = sequelize.define(
   "User",
@@ -20,13 +17,19 @@ const User = sequelize.define(
       type: DataTypes.STRING,
       primaryKey: true,
     },
+    email_verified_at: {
+      type: DataTypes.DATE,
+      primaryKey: false,
+    },
     token: {
       type: DataTypes.STRING,
     },
   },
   {
     tableName: "users",
-    timestamps: false,
+    timestamps: true,
+    createdAt: "created_at",
+    updatedAt: "updated_at",
   }
 );
 
