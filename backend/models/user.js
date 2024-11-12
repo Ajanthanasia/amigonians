@@ -24,6 +24,9 @@ const User = sequelize.define(
     token: {
       type: DataTypes.STRING,
     },
+    password: {
+      type: DataTypes.STRING,
+    },
   },
   {
     tableName: "users",

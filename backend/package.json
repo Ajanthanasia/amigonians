@@ -4,7 +4,9 @@
   "description": "admin account",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js",
+    "dev":"nodemon index.js"
   },
   "author": "ajimash",
   "license": "ISC",
@@ -14,5 +16,8 @@
     "express": "^4.21.1",
     "mysql2": "^3.11.4",
     "sequelize": "^6.37.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   }
 }
