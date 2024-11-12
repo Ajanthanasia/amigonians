@@ -25,7 +25,6 @@ exports.authLogin = async (req, res) => {
         res.status(200).json({ status: true, message: "Logined", data: user });
       }
     }
-    res.send("Whoops!");
   } catch (err) {
     console.log(err);
   }
